@@ -19,7 +19,8 @@ else:
                          " a score out of 10."))
     print()
 
-    print("Remember to write the numbers as e.g. one instead of 1")
+    print("You will be given 10 questions which you will answer. At the end you will then be given a score out of 10. "
+          "Remember to write the numbers as e.g. one instead of 1")
 
     # questions and answers
     questions = {
