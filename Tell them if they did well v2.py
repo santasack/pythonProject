@@ -1,29 +1,9 @@
-# Final version
+# Same as v1 but i add it to some code for testing
+
 
 import random
 
-print("Welcome to this Māori language quiz!")
-user_input = input("Press Enter to proceed or type 'no' to quit: ")
-if user_input.lower() == "no":
-    print("Thank you for considering this quiz. Have a nice day!")
-else:
-    print("Let's get started with the quiz!")
-
-    def formatter(symbol, text):
-        sides = symbol * 3
-        formatted_text = f"{sides} {text} {sides}"
-        top_bottom = symbol * len(formatted_text)
-        return f"{top_bottom}\n{formatted_text}\n{top_bottom}"
-
-    print(formatter("*", "Welcome to this Māori language quiz! You will be asked 10 questions and given"
-                         " a score out of 10."))
-    print()
-
-    print("You will be given 10 questions which you will answer. At the end you will then be given a score out of 10. "
-          "Remember to write the numbers as e.g. one instead of 1")
-
-    # questions and answers
-    questions = {
+questions = {
         "What is the English word for 'Kohitātea'?": "January",
         "What is the English word for 'Hui-tanguru'?": "February",
         "What is the English word for 'Poutū-te-rangi'?": "March",
@@ -48,32 +28,30 @@ else:
         "What is the English word for 'tekau'?": "ten"
     }
 
-    # Shuffle the questions
-    questions_list = list(questions.items())
-    random.shuffle(questions_list)
+questions_list = list(questions.items())
+random.shuffle(questions_list)
 
-    # Show score
-    score = 0
+score = 0
 
-    # Ask each question and check the answer
-    for question, answer in questions_list[:10]:
+for question, answer in questions_list[:10]:
         user_answer = input(question + " ")
         if user_answer.lower() == answer.lower():
-            print(formatter("!", "CORRECT"))
-            print()
+            print("Correct!")
             score += 1
+
+
+
         else:
             print("Incorrect. The answer is", answer)
 
-    # Show the final score
-    print("Your final score is", score, "out of 10.")
-    if score < 3:
+print("Your final score is", score, "out of 10.")
+
+
+if score < 3:
         print("You suck learn some Maori!")
-    elif score <= 5 >= 3:
+elif score <= 5 >= 3:
         print("Eh you've got some learning to do")
-    elif score <= 8 > 5:
+elif score <= 8 > 5:
         print("Well done mate your quite good at this")
-    elif score >= 9:
+elif score >= 9:
         print("Your a Maori language genius!")
-
-
