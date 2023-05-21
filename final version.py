@@ -74,6 +74,4 @@ else:
     elif score <= 8 > 5:
         print("Well done mate your quite good at this")
     elif score >= 9:
-        print("Your a Maori language genius!")
-
-
+        print("Your a Maori language genius!")  
