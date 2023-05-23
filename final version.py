@@ -2,7 +2,21 @@
 
 import random
 
-print("Welcome to this Māori language quiz!")
+
+# Get users name and age
+
+def get_user_info():
+    name = input("Please enter your name: ")
+    age = input("Please enter your age: ")
+    return name, age
+
+
+user_name, user_age = get_user_info()
+print("User:", user_name)
+print("Age:", user_age)
+
+
+print(f"Welcome {user_name} to this Māori language quiz!")
 user_input = input("Press Enter to proceed or type 'no' to quit: ")
 if user_input.lower() == "no":
     print("Thank you for considering this quiz. Have a nice day!")
@@ -74,4 +88,4 @@ else:
     elif score <= 8 > 5:
         print("Well done mate your quite good at this")
     elif score >= 9:
-        print("Your a Maori language genius!")  
+        print("Your a Maori language genius!")
